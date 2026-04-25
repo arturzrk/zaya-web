@@ -1,3 +1,15 @@
 {
-  "target_branch": "main"
+  "feature_number": "001",
+  "slug": "001-angular-to-nextjs-migration",
+  "friendly_name": "Migration of Legacy Angular Site to Next.js",
+  "mission": "software-dev",
+  "source_description": "Migrate all pages and content from the existing Angular 5 ZayaDesign site to the new Next.js 15 codebase, treating it as a redesign opportunity.",
+  "created_at": "2026-04-25T00:00:00Z",
+  "target_branch": "main",
+  "vcs": "git",
+  "github_issue": {
+    "number": 1,
+    "title": "Migration of legacy angular design",
+    "url": "https://github.com/arturzrk/zaya-web/issues/1"
+  }
 }

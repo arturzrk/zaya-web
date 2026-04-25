@@ -1,108 +1,90 @@
-# Implementation Plan: [FEATURE]
-*Path: [templates/plan-template.md](templates/plan-template.md)*
+# Implementation Plan: Migration of Legacy Angular Site to Next.js
 
-
-**Branch**: `[###-feature-name]` | **Date**: [DATE] | **Spec**: [link]
-**Input**: Feature specification from `/polaris-specs/[###-feature-name]/spec.md`
-
-**Note**: This template is filled in by the `/polaris.plan` command. See `src/specify_cli/missions/software-dev/command-templates/plan.md` for the execution workflow.
-
-The planner will not begin until all planning questions have been answered-capture those answers in this document before progressing to later phases.
+**Branch**: `main` | **Date**: 2026-04-25 | **Spec**: [spec.md](spec.md)
+**GitHub**: [#1 — Migration of legacy angular design](https://github.com/arturzrk/zaya-web/issues/1)
 
 ## Summary
 
-[Extract from feature spec: primary requirement + technical approach from research]
+Migrate the existing Zaya Garden Design Angular 5 marketing site to Next.js 15 (App Router). The migration is a redesign opportunity: all content is preserved, the visual design is modernised with Tailwind CSS, and the result is a fast, SEO-optimised, mobile-first static site. Portfolio data is managed as static TypeScript constants (Phase 1); a backend CMS/API integration is planned as a future enhancement.
 
 ## Technical Context
 
-<!--
-  ACTION REQUIRED: Replace the content in this section with the technical details
-  for the project. The structure here is presented in advisory capacity to guide
-  the iteration process.
--->
-
-**Language/Version**: [e.g., Python 3.14+, Swift 6.0+, Rust 1.90+ or NEEDS CLARIFICATION]  
-**Primary Dependencies**: [e.g., FastAPI, UIKit, LLVM or NEEDS CLARIFICATION]  
-**Storage**: [if applicable, e.g., PostgreSQL, CoreData, files or N/A]  
-**Testing**: [e.g., pytest, XCTest, cargo test or NEEDS CLARIFICATION]  
-**Target Platform**: [e.g., Linux server, iOS 15+, WASM or NEEDS CLARIFICATION]
-**Project Type**: [single/web/mobile - determines source structure]  
-**Performance Goals**: [domain-specific, e.g., command completes in <3s, <15% overhead on existing commands, full suite <30 min or NEEDS CLARIFICATION]  
-**Constraints**: [domain-specific, e.g., <200ms p95, <100MB memory, offline-capable or NEEDS CLARIFICATION]  
-**Scale/Scope**: [domain-specific, e.g., 10k users, 1M LOC, 50 screens or NEEDS CLARIFICATION]
+**Language/Version**: TypeScript 5+ (strict mode)
+**Framework**: Next.js 15 (App Router), React 19
+**Styling**: Tailwind CSS v4 — mobile-first, utility-first
+**Storage**: Static TypeScript constants (`lib/projects.ts`, `lib/policies.ts`) — no database in this feature
+**Testing**: Jest + React Testing Library (unit/component), Playwright (E2E)
+**Target Platform**: Vercel (production), Node.js 20 LTS
+**Performance Goals**: Lighthouse mobile >= 85 Performance, >= 90 Accessibility/SEO/Best Practices
+**Constraints**: TypeScript strict, named exports only, no default exports, no raw img tags, no inline style props
 
 ## Constitution Check
 
-*GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
-
-[Gates determined based on constitution file]
+| Rule | Status | Notes |
+|---|---|---|
+| TypeScript strict | PASS | tsconfig already configured |
+| Named exports only | PASS | enforced in all new files |
+| No default exports | PASS | enforced in all new files |
+| Tailwind classes (no inline styles) | PASS | applied throughout |
+| next/image for all images | PASS | raw img tags prohibited |
+| No Angular patterns | PASS | fresh Next.js codebase |
+| Server Components by default | PASS | Client Components only where needed |
+| Mobile-first | PASS | Tailwind sm:/md:/lg: breakpoints |
 
 ## Project Structure
 
-### Documentation (this feature)
-
 ```
-polaris-specs/[###-feature]/
-├── plan.md              # This file (/polaris.plan command output)
-├── research.md          # Phase 0 output (/polaris.plan command)
-├── data-model.md        # Phase 1 output (/polaris.plan command)
-├── quickstart.md        # Phase 1 output (/polaris.plan command)
-├── contracts/           # Phase 1 output (/polaris.plan command)
-└── tasks.md             # Phase 2 output (/polaris.tasks command - NOT created by /polaris.plan)
-```
+app/
+├── layout.tsx                    # Root layout (Header, Footer)
+├── page.tsx                      # Home page
+├── not-found.tsx                 # 404 page
+├── about/
+│   └── page.tsx
+├── contact/
+│   └── page.tsx
+├── portfolio/
+│   ├── page.tsx                  # Portfolio grid
+│   └── [slug]/
+│       └── page.tsx              # Portfolio detail
+├── policy/
+│   └── [slug]/
+│       └── page.tsx
+└── api/
+    └── contact/
+        └── route.ts              # Contact form stub
 
-### Source Code (repository root)
-<!--
-  ACTION REQUIRED: Replace the placeholder tree below with the concrete layout
-  for this feature. Delete unused options and expand the chosen structure with
-  real paths (e.g., apps/admin, packages/something). The delivered plan must
-  not include Option labels.
--->
+components/
+├── Header.tsx
+├── Footer.tsx
+├── Hero.tsx
+├── ProcessSteps.tsx
+├── Services.tsx
+├── PortfolioGrid.tsx
+├── ProjectGallery.tsx
+└── ContactForm.tsx
 
-```
-# [REMOVE IF UNUSED] Option 1: Single project (DEFAULT)
-src/
-├── models/
-├── services/
-├── cli/
-└── lib/
+lib/
+├── projects.ts                   # Static portfolio data
+└── policies.ts                   # Static policy content
 
-tests/
-├── contract/
-├── integration/
-└── unit/
-
-# [REMOVE IF UNUSED] Option 2: Web application (when "frontend" + "backend" detected)
-backend/
-├── src/
-│   ├── models/
-│   ├── services/
-│   └── api/
-└── tests/
-
-frontend/
-├── src/
-│   ├── components/
-│   ├── pages/
-│   └── services/
-└── tests/
-
-# [REMOVE IF UNUSED] Option 3: Mobile + API (when "iOS/Android" detected)
-api/
-└── [same as backend above]
-
-ios/ or android/
-└── [platform-specific structure: feature modules, UI flows, platform tests]
+public/
+└── images/
+    └── portfolio/                # Migrated from Angular assets
 ```
 
-**Structure Decision**: [Document the selected structure and reference the real
-directories captured above]
+## Work Packages
 
-## Complexity Tracking
+| WP | Title | Dependencies | Lane |
+|---|---|---|---|
+| WP01 | Shared layout — Header, Footer, root Layout | — | planned |
+| WP02 | Home page | WP01 | planned |
+| WP03 | Portfolio grid, detail pages, image migration | WP01 | planned |
+| WP04 | Contact page and API route stub | WP01 | planned |
+| WP05 | About, Policy, and 404 pages | WP01 | planned |
+| WP06 | SEO metadata, Lighthouse audit, final polish | WP02–WP05 | planned |
 
-*Fill ONLY if Constitution Check has violations that must be justified*
+## Future Enhancements (out of scope)
 
-| Violation | Why Needed | Simpler Alternative Rejected Because |
-|-----------|------------|-------------------------------------|
-| [e.g., 4th project] | [current need] | [why 3 projects insufficient] |
-| [e.g., Repository pattern] | [specific problem] | [why direct DB access insufficient] |
+- **Backend CMS/API for portfolio data**: Replace static `lib/projects.ts` with API calls to a headless CMS or custom backend. Planned for Phase 2 subscription platform work.
+- **Contact form email delivery**: Wire `app/api/contact/route.ts` to an email service (Resend or SendGrid).
+- **Subscription platform**: User accounts, garden data storage, advice services.
