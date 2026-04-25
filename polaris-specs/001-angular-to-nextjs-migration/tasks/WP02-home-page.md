@@ -1,12 +1,16 @@
 ---
 work_package_id: WP02
 title: Home page
-lane: planned
+lane: "doing"
 dependencies: []
+base_branch: main
+base_commit: 1f3f9fa2f411b7cf910d6b23dd0156d97d0926ef
+created_at: '2026-04-25T15:58:20.548457+00:00'
 test_status: pending
 test_file: tests/e2e/WP02-home-page.e2e.js
 domain: frontend-craft
 feature: 001-angular-to-nextjs-migration
+shell_pid: "57826"
 ---
 
 # WP02 — Home page
