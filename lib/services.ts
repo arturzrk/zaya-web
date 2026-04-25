@@ -11,7 +11,7 @@ export const services: Service[] = [
     id: "interior-design",
     title: "Projektowanie Wnętrz",
     description:
-      "Realizujemy koncepcję klienta w kształtowaniu przestrzeni mieszkalnej. Projektując wnętrza, staramy się aby ich aranżacja była zarówno praktyczna jak i estetyczna.",
+      "Realizujemy koncepcję klienta w kształtowaniu przestrzeni mieszkalnej. Projektując wnętrza, staramy się, aby ich aranżacja była zarówno praktyczna, jak i estetyczna.",
   },
   {
     id: "execution",
