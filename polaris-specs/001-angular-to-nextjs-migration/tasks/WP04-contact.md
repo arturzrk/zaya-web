@@ -1,8 +1,11 @@
 ---
 work_package_id: WP04
-title: "Contact page and API route stub"
+title: Contact page and API route stub
 lane: planned
-dependencies: [WP01]
+dependencies: []
+test_status: pending
+test_file: tests/e2e/WP04-contact-page-and-api-route-stub.e2e.js
+domain: api-design
 feature: 001-angular-to-nextjs-migration
 ---
 

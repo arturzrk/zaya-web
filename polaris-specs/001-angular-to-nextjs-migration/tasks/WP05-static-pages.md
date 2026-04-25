@@ -1,8 +1,11 @@
 ---
 work_package_id: WP05
-title: "About, Policy, and 404 pages"
+title: About, Policy, and 404 pages
 lane: planned
-dependencies: [WP01]
+dependencies: []
+test_status: pending
+test_file: tests/e2e/WP05-about-policy-and-404-pages.e2e.js
+domain: frontend-craft
 feature: 001-angular-to-nextjs-migration
 ---
 

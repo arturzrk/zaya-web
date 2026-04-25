@@ -1,8 +1,11 @@
 ---
 work_package_id: WP01
-title: "Shared layout — Header, Footer, root Layout"
+title: Shared layout — Header, Footer, root Layout
 lane: planned
 dependencies: []
+test_status: pending
+test_file: tests/e2e/WP01-shared-layout-header-footer-root-layout.e2e.js
+domain: frontend-craft
 feature: 001-angular-to-nextjs-migration
 ---
 

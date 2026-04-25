@@ -1,8 +1,11 @@
 ---
 work_package_id: WP03
-title: "Portfolio grid, detail pages, image migration"
+title: Portfolio grid, detail pages, image migration
 lane: planned
-dependencies: [WP01]
+dependencies: []
+test_status: pending
+test_file: tests/e2e/WP03-portfolio-grid-detail-pages-image-migration.e2e.js
+domain: frontend-craft
 feature: 001-angular-to-nextjs-migration
 ---
 

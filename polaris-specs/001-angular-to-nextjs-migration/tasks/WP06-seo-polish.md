@@ -1,8 +1,11 @@
 ---
 work_package_id: WP06
-title: "SEO metadata, Lighthouse audit, final polish"
+title: SEO metadata, Lighthouse audit, final polish
 lane: planned
-dependencies: [WP02, WP03, WP04, WP05]
+dependencies: []
+test_status: pending
+test_file: tests/e2e/WP06-seo-metadata-lighthouse-audit-final-polish.e2e.js
+domain: database
 feature: 001-angular-to-nextjs-migration
 ---
 

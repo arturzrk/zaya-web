@@ -1,8 +1,11 @@
 ---
 work_package_id: WP02
-title: "Home page"
+title: Home page
 lane: planned
-dependencies: [WP01]
+dependencies: []
+test_status: pending
+test_file: tests/e2e/WP02-home-page.e2e.js
+domain: frontend-craft
 feature: 001-angular-to-nextjs-migration
 ---
 
