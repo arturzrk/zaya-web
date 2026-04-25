@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     "Zaya Design Studio — professional garden and interior design services in Jelenia Góra.",
 };
 
-export function RootLayout({
+export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
