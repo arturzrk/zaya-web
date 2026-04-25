@@ -1,12 +1,16 @@
 ---
 work_package_id: WP06
 title: SEO metadata, Lighthouse audit, final polish
-lane: planned
+lane: "doing"
 dependencies: []
+base_branch: main
+base_commit: e07c7129e546d32ae85da1b7155e2c7c23ed33fa
+created_at: '2026-04-25T17:50:35.035532+00:00'
 test_status: pending
 test_file: tests/e2e/WP06-seo-metadata-lighthouse-audit-final-polish.e2e.js
 domain: database
 feature: 001-angular-to-nextjs-migration
+shell_pid: "89730"
 ---
 
 # WP06 — SEO metadata, Lighthouse audit, final polish
