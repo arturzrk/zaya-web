@@ -8,6 +8,13 @@ export const metadata: Metadata = {
   title: "Zaya Design Studio — Projektowanie Ogrodów i Wnętrz",
   description:
     "Zaya Design Studio oferuje projektowanie ogrodów, wnętrz oraz kompleksową realizację. Jelenia Góra i okolice.",
+  openGraph: {
+    title: "Zaya Design Studio — Projektowanie Ogrodów i Wnętrz",
+    description:
+      "Zaya Design Studio oferuje projektowanie ogrodów, wnętrz oraz kompleksową realizację. Jelenia Góra i okolice.",
+    url: "https://zaya-web-bay.vercel.app",
+    images: [{ url: "/images/slider666.jpeg", width: 1200, height: 630, alt: "Zaya Design Studio" }],
+  },
 };
 
 export default function HomePage() {

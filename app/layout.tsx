@@ -12,7 +12,13 @@ export const metadata: Metadata = {
     template: "%s | Zaya Design Studio",
   },
   description:
-    "Zaya Design Studio — professional garden and interior design services in Jelenia Góra.",
+    "Zaya Design Studio — projektowanie ogrodów i wnętrz w Jeleniej Górze i okolicach.",
+  robots: { index: true, follow: true },
+  openGraph: {
+    siteName: "Zaya Design Studio",
+    locale: "pl_PL",
+    type: "website",
+  },
 };
 
 export default function RootLayout({

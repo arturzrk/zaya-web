@@ -5,6 +5,11 @@ import { projects } from "@/lib/projects";
 export const metadata: Metadata = {
   title: "Portfolio — Zaya Design",
   description: "Realizacje projektów ogrodowych i wnętrzarskich Zaya Design.",
+  openGraph: {
+    title: "Portfolio — Zaya Design",
+    description: "Realizacje projektów ogrodowych i wnętrzarskich Zaya Design.",
+    url: "https://zaya-web-bay.vercel.app/portfolio",
+  },
 };
 
 export default function PortfolioPage() {
