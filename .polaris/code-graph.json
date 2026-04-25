@@ -1,0 +1,564 @@
+{
+  "version": "1.1",
+  "generated_at": "2026-04-25T08:21:35.260313+00:00",
+  "files": {
+    "server.js": {
+      "imports": [
+        "express"
+      ],
+      "functions": [],
+      "classes": [],
+      "imported_by": []
+    },
+    "karma.conf.js": {
+      "imports": [
+        "karma-jasmine",
+        "karma-chrome-launcher",
+        "karma-jasmine-html-reporter",
+        "karma-coverage-istanbul-reporter",
+        "@angular/cli/plugins/karma"
+      ],
+      "functions": [],
+      "classes": [],
+      "imported_by": []
+    },
+    "protractor.conf.js": {
+      "imports": [
+        "jasmine-spec-reporter",
+        "ts-node"
+      ],
+      "functions": [],
+      "classes": [],
+      "imported_by": []
+    },
+    "e2e/app.e2e-spec.ts": {
+      "imports": [
+        "./app.po"
+      ],
+      "functions": [],
+      "classes": [],
+      "imported_by": []
+    },
+    "e2e/app.po.ts": {
+      "imports": [
+        "protractor"
+      ],
+      "functions": [],
+      "classes": [
+        "AppPage"
+      ],
+      "imported_by": []
+    },
+    "src/main.ts": {
+      "imports": [
+        "@angular/core",
+        "@angular/platform-browser-dynamic",
+        "./app/app.module",
+        "src/environments/environment.ts"
+      ],
+      "functions": [],
+      "classes": [],
+      "imported_by": []
+    },
+    "src/typings.d.ts": {
+      "imports": [],
+      "functions": [],
+      "classes": [],
+      "imported_by": []
+    },
+    "src/test.ts": {
+      "imports": [
+        "zone.js/dist/zone-testing",
+        "@angular/core/testing",
+        "@angular/platform-browser-dynamic/testing"
+      ],
+      "functions": [],
+      "classes": [],
+      "imported_by": []
+    },
+    "src/polyfills.ts": {
+      "imports": [
+        "core-js/es6/symbol",
+        "core-js/es6/object",
+        "core-js/es6/function",
+        "core-js/es6/parse-int",
+        "core-js/es6/parse-float",
+        "core-js/es6/number",
+        "core-js/es6/math",
+        "core-js/es6/string",
+        "core-js/es6/date",
+        "core-js/es6/array",
+        "core-js/es6/regexp",
+        "core-js/es6/map",
+        "core-js/es6/weak-map",
+        "core-js/es6/set",
+        "classlist.js",
+        "core-js/es6/reflect",
+        "core-js/es7/reflect",
+        "web-animations-js",
+        "zone.js/dist/zone"
+      ],
+      "functions": [],
+      "classes": [],
+      "imported_by": []
+    },
+    "src/app/app.component.spec.ts": {
+      "imports": [
+        "@angular/core/testing",
+        "./app.component"
+      ],
+      "functions": [],
+      "classes": [],
+      "imported_by": []
+    },
+    "src/app/app.module.ts": {
+      "imports": [
+        "./zaya-portfolio-detail/zaya-portfolio-detail.component",
+        "@angular/platform-browser",
+        "@angular/core",
+        "@angular/router",
+        "./app.component",
+        "./footer/footer.component",
+        "./zaya-header/zaya-header.component",
+        "./zaya-slider/zaya-slider.component",
+        "./zaya-portfolio/zaya-portfolio.component",
+        "./zaya-main-page/zaya-main-page.component",
+        "./zaya-contact/zaya-contact.component",
+        "./zaya-scope/zaya-scope.component",
+        "ng2-scroll-to",
+        "./zaya-about/zaya-about.component",
+        "./services/zaya-portfolio-detail.service",
+        "./zaya-portfolio-detail-2/zaya-portfolio-detail-2.component",
+        "angular2-moment",
+        "./services/zaya-mapper.service",
+        "@angular/forms",
+        "ng-recaptcha",
+        "ng-recaptcha/forms",
+        "./services/zaya-http.service",
+        "@angular/common/http",
+        "ngx-toastr",
+        "ng2-go-top-button",
+        "@angular/platform-browser/animations",
+        "./fs-top-contact-bar/fs-top-contact-bar.component",
+        "./fs-owner-app/fs-owner-app.component",
+        "./fs-cookies-privacy-police/fs-cookies-privacy-police.component",
+        "./fs-not-found/fs-not-found.component",
+        "./fs-footer-cookie-privacy-social/fs-footer-cookie-privacy-social.component"
+      ],
+      "functions": [
+        "getBaseUrl"
+      ],
+      "classes": [
+        "AppModule"
+      ],
+      "imported_by": []
+    },
+    "src/app/app.component.ts": {
+      "imports": [
+        "@angular/core"
+      ],
+      "functions": [],
+      "classes": [
+        "AppComponent"
+      ],
+      "imported_by": []
+    },
+    "src/app/zaya-contact/zaya-contact.component.spec.ts": {
+      "imports": [
+        "@angular/core/testing",
+        "./zaya-contact.component"
+      ],
+      "functions": [],
+      "classes": [],
+      "imported_by": []
+    },
+    "src/app/zaya-contact/zaya-contact.component.ts": {
+      "imports": [
+        "src/app/.common/zaya-base-component.ts",
+        "src/app/.model/zaya-portfolio-request-contact.ts",
+        "@angular/core",
+        "../services/zaya-mapper.service",
+        "ngx-toastr",
+        "../services/zaya-http.service"
+      ],
+      "functions": [],
+      "classes": [
+        "ZayaContactComponent"
+      ],
+      "imported_by": []
+    },
+    "src/app/zaya-portfolio-detail/zaya-portfolio-detail.component.ts": {
+      "imports": [
+        "@angular/core",
+        "angular2-lightbox"
+      ],
+      "functions": [],
+      "classes": [
+        "ZayaPortfolioDetailComponent"
+      ],
+      "imported_by": []
+    },
+    "src/app/zaya-portfolio-detail/zaya-portfolio-detail.component.spec.ts": {
+      "imports": [
+        "@angular/core/testing",
+        "./zaya-portfolio-detail.component"
+      ],
+      "functions": [],
+      "classes": [],
+      "imported_by": []
+    },
+    "src/app/zaya-portfolio-detail-2/zaya-portfolio-detail-2.component.ts": {
+      "imports": [
+        "src/app/.common/zaya-base-component.ts",
+        "src/app/.model/zaya-portfolio-detail-model.ts",
+        "@angular/platform-browser-dynamic",
+        "@angular/core",
+        "../services/zaya-portfolio-detail.service",
+        "@angular/router",
+        "json2typescript",
+        "../services/zaya-mapper.service"
+      ],
+      "functions": [],
+      "classes": [
+        "ZayaPortfolioDetail2Component"
+      ],
+      "imported_by": []
+    },
+    "src/app/zaya-portfolio-detail-2/zaya-portfolio-detail-2.component.spec.ts": {
+      "imports": [
+        "@angular/core/testing",
+        "./zaya-portfolio-detail-2.component"
+      ],
+      "functions": [],
+      "classes": [],
+      "imported_by": []
+    },
+    "src/app/footer/footer.component.ts": {
+      "imports": [
+        "@angular/core"
+      ],
+      "functions": [],
+      "classes": [
+        "FooterComponent"
+      ],
+      "imported_by": []
+    },
+    "src/app/footer/footer.component.spec.ts": {
+      "imports": [
+        "@angular/core/testing",
+        "./footer.component"
+      ],
+      "functions": [],
+      "classes": [],
+      "imported_by": []
+    },
+    "src/app/zaya-main-page/zaya-main-page.component.ts": {
+      "imports": [
+        "src/app/.common/zaya-base-component.ts",
+        "@angular/core"
+      ],
+      "functions": [],
+      "classes": [
+        "ZayaMainPageComponent"
+      ],
+      "imported_by": []
+    },
+    "src/app/zaya-main-page/zaya-main-page.component.spec.ts": {
+      "imports": [
+        "@angular/core/testing",
+        "./zaya-main-page.component"
+      ],
+      "functions": [],
+      "classes": [],
+      "imported_by": []
+    },
+    "src/app/fs-top-contact-bar/fs-top-contact-bar.component.spec.ts": {
+      "imports": [
+        "@angular/core/testing",
+        "./fs-top-contact-bar.component"
+      ],
+      "functions": [],
+      "classes": [],
+      "imported_by": []
+    },
+    "src/app/fs-top-contact-bar/fs-top-contact-bar.component.ts": {
+      "imports": [
+        "@angular/core"
+      ],
+      "functions": [],
+      "classes": [
+        "FSTopContactBarComponent"
+      ],
+      "imported_by": []
+    },
+    "src/app/zaya-slider/zaya-slider.component.spec.ts": {
+      "imports": [
+        "@angular/core/testing",
+        "./zaya-slider.component"
+      ],
+      "functions": [],
+      "classes": [],
+      "imported_by": []
+    },
+    "src/app/zaya-slider/zaya-slider.component.ts": {
+      "imports": [
+        "@angular/core"
+      ],
+      "functions": [],
+      "classes": [
+        "ZayaSliderComponent"
+      ],
+      "imported_by": []
+    },
+    "src/app/fs-footer-cookie-privacy-social/fs-footer-cookie-privacy-social.component.ts": {
+      "imports": [
+        "@angular/core"
+      ],
+      "functions": [],
+      "classes": [
+        "FsFooterCookiePrivacySocialComponent"
+      ],
+      "imported_by": []
+    },
+    "src/app/fs-footer-cookie-privacy-social/fs-footer-cookie-privacy-social.component.spec.ts": {
+      "imports": [
+        "@angular/core/testing",
+        "./fs-footer-cookie-privacy-social.component"
+      ],
+      "functions": [],
+      "classes": [],
+      "imported_by": []
+    },
+    "src/app/zaya-portfolio/zaya-portfolio.component.ts": {
+      "imports": [
+        "src/app/.common/zaya-base-component.ts",
+        "@angular/core",
+        "../services/zaya-portfolio-detail.service",
+        "src/app/.model/zaya-portfolio-detail-model.ts"
+      ],
+      "functions": [],
+      "classes": [
+        "ZayaPortfolioComponent"
+      ],
+      "imported_by": []
+    },
+    "src/app/zaya-portfolio/zaya-portfolio.component.spec.ts": {
+      "imports": [
+        "@angular/core/testing",
+        "./zaya-portfolio.component"
+      ],
+      "functions": [],
+      "classes": [],
+      "imported_by": []
+    },
+    "src/app/fs-cookies-privacy-police/fs-cookies-privacy-police.component.spec.ts": {
+      "imports": [
+        "@angular/core/testing",
+        "./fs-cookies-privacy-police.component"
+      ],
+      "functions": [],
+      "classes": [],
+      "imported_by": []
+    },
+    "src/app/fs-cookies-privacy-police/fs-cookies-privacy-police.component.ts": {
+      "imports": [
+        "@angular/core",
+        "@angular/router",
+        "src/app/.common/zaya-base-component.ts"
+      ],
+      "functions": [],
+      "classes": [
+        "FSCookiesPrivacyPoliceComponent"
+      ],
+      "imported_by": []
+    },
+    "src/app/fs-not-found/fs-not-found.component.ts": {
+      "imports": [
+        "src/app/.common/zaya-base-component.ts",
+        "@angular/core"
+      ],
+      "functions": [],
+      "classes": [
+        "FSNotFoundComponent"
+      ],
+      "imported_by": []
+    },
+    "src/app/fs-not-found/fs-not-found.component.spec.ts": {
+      "imports": [
+        "@angular/core/testing",
+        "./fs-not-found.component"
+      ],
+      "functions": [],
+      "classes": [],
+      "imported_by": []
+    },
+    "src/app/zaya-about/zaya-about.component.spec.ts": {
+      "imports": [
+        "@angular/core/testing",
+        "./zaya-about.component"
+      ],
+      "functions": [],
+      "classes": [],
+      "imported_by": []
+    },
+    "src/app/zaya-about/zaya-about.component.ts": {
+      "imports": [
+        "@angular/core"
+      ],
+      "functions": [],
+      "classes": [
+        "ZayaAboutComponent"
+      ],
+      "imported_by": []
+    },
+    "src/app/zaya-scope/zaya-scope.component.spec.ts": {
+      "imports": [
+        "@angular/core/testing",
+        "./zaya-scope.component"
+      ],
+      "functions": [],
+      "classes": [],
+      "imported_by": []
+    },
+    "src/app/zaya-scope/zaya-scope.component.ts": {
+      "imports": [
+        "@angular/core"
+      ],
+      "functions": [],
+      "classes": [
+        "ZayaScopeComponent"
+      ],
+      "imported_by": []
+    },
+    "src/app/zaya-header/zaya-header.component.ts": {
+      "imports": [
+        "@angular/core"
+      ],
+      "functions": [],
+      "classes": [
+        "ZayaHeaderComponent"
+      ],
+      "imported_by": []
+    },
+    "src/app/zaya-header/zaya-header.component.spec.ts": {
+      "imports": [
+        "@angular/core/testing",
+        "./zaya-header.component"
+      ],
+      "functions": [],
+      "classes": [],
+      "imported_by": []
+    },
+    "src/app/services/zaya-mapper.service.ts": {
+      "imports": [
+        "@angular/core",
+        "json2typescript"
+      ],
+      "functions": [],
+      "classes": [
+        "ZayaMapperService"
+      ],
+      "imported_by": []
+    },
+    "src/app/services/zaya-portfolio-detail.service.spec.ts": {
+      "imports": [
+        "@angular/core/testing",
+        "./zaya-portfolio-detail.service"
+      ],
+      "functions": [],
+      "classes": [],
+      "imported_by": []
+    },
+    "src/app/services/zaya-portfolio-detail.service.ts": {
+      "imports": [
+        "@angular/core",
+        "src/app/zaya-static-data/zaya-portfolio-detail-data.ts"
+      ],
+      "functions": [],
+      "classes": [
+        "ZayaPortfolioDetailService"
+      ],
+      "imported_by": []
+    },
+    "src/app/services/zaya-mapper.service.spec.ts": {
+      "imports": [
+        "src/app/.model/zaya-portfolio-detail-model.ts",
+        "@angular/core/testing",
+        "./zaya-mapper.service"
+      ],
+      "functions": [],
+      "classes": [],
+      "imported_by": []
+    },
+    "src/app/services/zaya-http.service.ts": {
+      "imports": [
+        "@angular/core",
+        "rxjs/Observable",
+        "rxjs/add/observable/throw",
+        "@angular/common/http",
+        "rxjs/operators"
+      ],
+      "functions": [],
+      "classes": [
+        "ZayaHttpService"
+      ],
+      "imported_by": []
+    },
+    "src/app/services/zaya-http.service.spec.ts": {
+      "imports": [
+        "@angular/core/testing",
+        "./zaya-http.service"
+      ],
+      "functions": [],
+      "classes": [],
+      "imported_by": []
+    },
+    "src/app/zaya-static-data/zaya-portfolio-detail-data.ts": {
+      "imports": [],
+      "functions": [],
+      "classes": [],
+      "imported_by": [
+        "src/app/services/zaya-portfolio-detail.service.ts"
+      ]
+    },
+    "src/app/fs-owner-app/fs-owner-app.component.spec.ts": {
+      "imports": [
+        "@angular/core/testing",
+        "./fs-owner-app.component"
+      ],
+      "functions": [],
+      "classes": [],
+      "imported_by": []
+    },
+    "src/app/fs-owner-app/fs-owner-app.component.ts": {
+      "imports": [
+        "@angular/core"
+      ],
+      "functions": [],
+      "classes": [
+        "FSOwnerAppComponent"
+      ],
+      "imported_by": []
+    },
+    "src/environments/environment.prod.ts": {
+      "imports": [],
+      "functions": [],
+      "classes": [],
+      "imported_by": []
+    },
+    "src/environments/environment.ts": {
+      "imports": [],
+      "functions": [],
+      "classes": [],
+      "imported_by": [
+        "src/main.ts"
+      ]
+    },
+    "src/assets/custom-js/jquery.flexslider.min.js": {
+      "imports": [],
+      "functions": [],
+      "classes": [],
+      "imported_by": []
+    }
+  }
+}

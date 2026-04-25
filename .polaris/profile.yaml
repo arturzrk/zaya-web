@@ -1,0 +1,21 @@
+profile_version: '1.1'
+generated_at: '2026-04-25T08:21:35.250241+00:00'
+project:
+  primary_language: typescript
+  project_types:
+  - typescript
+  maturity: brownfield
+architecture:
+  patterns:
+  - src/ layout
+  - EditorConfig for consistency
+  top_level_dirs:
+  - e2e
+  - src
+test:
+  frameworks: []
+cicd:
+  platforms: []
+quality:
+  health_grade: A
+  health_score: 8.0
