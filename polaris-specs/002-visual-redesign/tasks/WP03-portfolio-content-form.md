@@ -1,11 +1,14 @@
 ---
 work_package_id: WP03
 title: Portfolio grid, content pages, form styling
-lane: "planned"
-dependencies: ["WP01"]
-base_branch: main
+lane: "doing"
+dependencies: [WP01]
+base_branch: 002-visual-redesign-WP01
+base_commit: 0965e3f4b3ce9c9380584af2d4899fe138588941
+created_at: '2026-04-26T11:45:17.735160+00:00'
+test_file: ''
 feature: 002-visual-redesign
-test_file: ""
+shell_pid: "47445"
 ---
 
 # WP03 — Portfolio grid, content pages, form styling
