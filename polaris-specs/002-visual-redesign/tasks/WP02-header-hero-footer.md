@@ -1,11 +1,14 @@
 ---
 work_package_id: WP02
 title: Header, Hero, Footer redesign
-lane: "planned"
-dependencies: ["WP01"]
-base_branch: main
+lane: "doing"
+dependencies: [WP01]
+base_branch: 002-visual-redesign-WP01
+base_commit: 0965e3f4b3ce9c9380584af2d4899fe138588941
+created_at: '2026-04-26T11:45:14.029200+00:00'
+test_file: ''
 feature: 002-visual-redesign
-test_file: ""
+shell_pid: "47374"
 ---
 
 # WP02 — Header, Hero, Footer redesign
