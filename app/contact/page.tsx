@@ -15,7 +15,7 @@ const INSTAGRAM_URL = "https://www.instagram.com/zayadesignstudio/";
 export default function ContactPage() {
   return (
     <section className="max-w-6xl mx-auto px-4 py-12">
-      <h1 className="text-3xl font-semibold text-stone-800 mb-2">Kontakt</h1>
+      <h1 className="font-display text-3xl font-semibold text-stone-800 mb-2">Kontakt</h1>
       <p className="text-stone-500 text-sm mb-10">
         Napisz do nas — odpiszemy w ciągu 1–2 dni roboczych.
       </p>
