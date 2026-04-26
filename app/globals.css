@@ -1,5 +1,14 @@
 @import "tailwindcss";
 
 @theme inline {
+  /* Fonts */
   --font-sans: var(--font-inter);
+  --font-display: var(--font-playfair);
+
+  /* Brand colours */
+  --color-forest: #2D5A27;
+  --color-forest-light: #3D7A35;
+  --color-cream: #FAF7F2;
+  --color-charcoal: #1C1C1C;
+  --color-stone-warm: #A8967E;
 }
