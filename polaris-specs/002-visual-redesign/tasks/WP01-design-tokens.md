@@ -1,11 +1,14 @@
 ---
 work_package_id: WP01
 title: Design tokens, fonts, global styles
-lane: "planned"
+lane: "doing"
 dependencies: []
 base_branch: main
+base_commit: 0db429c5c922b7b933657498f754e947dc29326e
+created_at: '2026-04-26T11:44:07.606937+00:00'
+test_file: ''
 feature: 002-visual-redesign
-test_file: ""
+shell_pid: "46650"
 ---
 
 # WP01 — Design tokens, fonts, global styles
