@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -14,11 +14,20 @@ const navLinks = [
 export function Header() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 60);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50">
+    <header className={scrolled ? "bg-white shadow-sm sticky top-0 z-50" : "bg-transparent absolute w-full z-10"}>
       <nav className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-        <Link href="/" className="text-xl font-bold tracking-widest uppercase text-stone-800">
+        <Link href="/" className="text-xl font-bold tracking-widest uppercase text-stone-800 font-display">
           Zaya Design
         </Link>
 
@@ -30,8 +39,10 @@ export function Header() {
                 href={href}
                 className={`text-sm uppercase tracking-wider transition-colors ${
                   pathname === href
-                    ? "text-stone-900 font-semibold border-b-2 border-stone-700"
-                    : "text-stone-500 hover:text-stone-900"
+                    ? "text-forest font-semibold"
+                    : scrolled
+                    ? "text-charcoal hover:text-forest"
+                    : "text-white hover:text-forest"
                 }`}
               >
                 {label}
@@ -55,13 +66,13 @@ export function Header() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <ul className="md:hidden border-t border-stone-100 px-4 py-4 flex flex-col gap-4 bg-white">
+        <ul className="md:hidden border-t border-stone-100 px-4 py-4 flex flex-col gap-4 bg-cream">
           {navLinks.map(({ href, label }) => (
             <li key={href}>
               <Link
                 href={href}
-                className={`block text-sm uppercase tracking-wider ${
-                  pathname === href ? "text-stone-900 font-semibold" : "text-stone-500"
+                className={`block text-sm uppercase tracking-wider text-charcoal hover:text-forest ${
+                  pathname === href ? "font-semibold" : ""
                 }`}
                 onClick={() => setMenuOpen(false)}
               >
