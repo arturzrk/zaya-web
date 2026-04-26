@@ -85,7 +85,7 @@ Reviewers should verify:
 
 ### Team Conventions
 
-- **Named exports only** — no default exports anywhere in the codebase
+- **Named exports only** — no default exports in `components/` and `lib/` files. Exception: Next.js route segment files (`app/**/layout.tsx`, `app/**/page.tsx`, `app/**/not-found.tsx`, `app/**/loading.tsx`) must use default exports as required by the framework.
 - **No inline `style` props** — use Tailwind utility classes; for component-specific overrides use CSS Modules, not inline styles
 - **Small, focused components** — avoid monolithic components; split by responsibility
 - **App Router patterns** — all routes in `app/` directory; do not use the Pages Router

@@ -11,5 +11,39 @@
     "number": 1,
     "title": "Migration of legacy angular design",
     "url": "https://github.com/arturzrk/zaya-web/issues/1"
-  }
+  },
+  "amendments": [
+    {
+      "amendment_id": "amd-001",
+      "text": "Files changed outside declared WP scope: app/layout.tsx, app/page.tsx, app/portfolio/page.tsx",
+      "timestamp": "2026-04-25T18:35:36.880379+00:00",
+      "affected_sections": [],
+      "artifacts_updated": {
+        "spec_sections": [],
+        "plan_files": [],
+        "wps_regenerated": [],
+        "wps_locked": [],
+        "wps_created": []
+      },
+      "agent": "unknown",
+      "source": "implement",
+      "drift_type": "expansion"
+    },
+    {
+      "amendment_id": "amd-002",
+      "text": "Files changed outside declared WP scope: app/layout.tsx, app/page.tsx, app/portfolio/page.tsx",
+      "timestamp": "2026-04-25T18:35:38.238550+00:00",
+      "affected_sections": [],
+      "artifacts_updated": {
+        "spec_sections": [],
+        "plan_files": [],
+        "wps_regenerated": [],
+        "wps_locked": [],
+        "wps_created": []
+      },
+      "agent": "unknown",
+      "source": "implement",
+      "drift_type": "expansion"
+    }
+  ]
 }

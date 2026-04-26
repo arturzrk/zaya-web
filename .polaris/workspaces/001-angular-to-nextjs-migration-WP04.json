@@ -1,0 +1,12 @@
+{
+  "wp_id": "WP04",
+  "feature_slug": "001-angular-to-nextjs-migration",
+  "worktree_path": ".worktrees/001-angular-to-nextjs-migration-WP04",
+  "branch_name": "001-angular-to-nextjs-migration-WP04",
+  "base_branch": "main",
+  "base_commit": "e59eff14a9f39cce548387829e9cc165137cd50d",
+  "dependencies": [],
+  "created_at": "2026-04-25T16:07:48.005107+00:00",
+  "created_by": "implement-command",
+  "vcs_backend": "git"
+}

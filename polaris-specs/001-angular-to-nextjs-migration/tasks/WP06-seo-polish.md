@@ -1,7 +1,7 @@
 ---
 work_package_id: WP06
 title: SEO metadata, Lighthouse audit, final polish
-lane: "doing"
+lane: "done"
 dependencies: []
 base_branch: main
 base_commit: e07c7129e546d32ae85da1b7155e2c7c23ed33fa
@@ -11,6 +11,8 @@ test_file: tests/e2e/WP06-seo-metadata-lighthouse-audit-final-polish.e2e.js
 domain: database
 feature: 001-angular-to-nextjs-migration
 shell_pid: "89730"
+reviewed_by: "Artur Żurek"
+review_status: "approved"
 ---
 
 # WP06 — SEO metadata, Lighthouse audit, final polish
@@ -48,3 +50,8 @@ Ensure every page has complete SEO metadata, run a Lighthouse audit against SC-0
 - [ ] No TypeScript errors, no ESLint warnings across the full codebase
 - [ ] Site renders correctly in Chrome, Firefox, and Safari
 - [ ] GitHub issue #1 updated with Vercel preview link
+
+## Activity Log
+
+- 2026-04-25T18:35:36Z – unknown – shell_pid=89730 – lane=for_review – Moved to for_review
+- 2026-04-25T18:35:38Z – unknown – shell_pid=89730 – lane=done – Moved to done

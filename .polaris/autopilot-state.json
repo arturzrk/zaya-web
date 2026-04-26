@@ -1,0 +1,20 @@
+{
+  "feature_slug": "001-angular-to-nextjs-migration",
+  "current_stage": "ship.review",
+  "wp_order": ["WP01", "WP02", "WP03", "WP04", "WP05", "WP06"],
+  "completed_wps": [],
+  "failed_wps": {},
+  "current_wp": "WP01",
+  "current_attempt": 1,
+  "max_attempts": 3,
+  "mode": "standard",
+  "on_failure": "skip-and-continue",
+  "started_at": "2026-04-25T00:00:00Z",
+  "updated_at": "2026-04-25T12:00:00Z",
+  "build": {
+    "test_plan": { "status": "complete" }
+  },
+  "ship": {
+    "test_execution": { "status": "passed", "passed": 6, "failed": 0, "total": 6, "coverage_percent": 0 }
+  }
+}

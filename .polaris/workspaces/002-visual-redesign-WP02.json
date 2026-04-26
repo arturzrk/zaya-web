@@ -1,0 +1,14 @@
+{
+  "wp_id": "WP02",
+  "feature_slug": "002-visual-redesign",
+  "worktree_path": ".worktrees/002-visual-redesign-WP02",
+  "branch_name": "002-visual-redesign-WP02",
+  "base_branch": "002-visual-redesign-WP01",
+  "base_commit": "0965e3f4b3ce9c9380584af2d4899fe138588941",
+  "dependencies": [
+    "WP01"
+  ],
+  "created_at": "2026-04-26T11:45:14.029200+00:00",
+  "created_by": "implement-command",
+  "vcs_backend": "git"
+}

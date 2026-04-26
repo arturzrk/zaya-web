@@ -1,3 +1,5 @@
 {
-  "target_branch": "main"
+  "target_branch": "main",
+  "vcs": "git",
+  "vcs_locked_at": "2026-04-26T11:44:07.201831+00:00"
 }
