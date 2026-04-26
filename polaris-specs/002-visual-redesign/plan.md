@@ -1,108 +1,56 @@
-# Implementation Plan: [FEATURE]
-*Path: [templates/plan-template.md](templates/plan-template.md)*
+# Implementation Plan: Bold Garden Brand Visual Redesign
 
-
-**Branch**: `[###-feature-name]` | **Date**: [DATE] | **Spec**: [link]
-**Input**: Feature specification from `/polaris-specs/[###-feature-name]/spec.md`
-
-**Note**: This template is filled in by the `/polaris.plan` command. See `src/specify_cli/missions/software-dev/command-templates/plan.md` for the execution workflow.
-
-The planner will not begin until all planning questions have been answered-capture those answers in this document before progressing to later phases.
+**Branch**: `002-visual-redesign` | **Date**: 2026-04-26 | **Spec**: spec.md
 
 ## Summary
 
-[Extract from feature spec: primary requirement + technical approach from research]
+Restyle the Zaya Design Next.js site with a bold garden brand identity: forest green accent (#2D5A27), Playfair Display serif headings, cream section backgrounds, transparent-to-opaque scrolling header, and a photo-forward portfolio grid. All 35 existing tests must continue to pass; no routes or content change.
 
 ## Technical Context
 
-<!--
-  ACTION REQUIRED: Replace the content in this section with the technical details
-  for the project. The structure here is presented in advisory capacity to guide
-  the iteration process.
--->
-
-**Language/Version**: [e.g., Python 3.14+, Swift 6.0+, Rust 1.90+ or NEEDS CLARIFICATION]  
-**Primary Dependencies**: [e.g., FastAPI, UIKit, LLVM or NEEDS CLARIFICATION]  
-**Storage**: [if applicable, e.g., PostgreSQL, CoreData, files or N/A]  
-**Testing**: [e.g., pytest, XCTest, cargo test or NEEDS CLARIFICATION]  
-**Target Platform**: [e.g., Linux server, iOS 15+, WASM or NEEDS CLARIFICATION]
-**Project Type**: [single/web/mobile - determines source structure]  
-**Performance Goals**: [domain-specific, e.g., command completes in <3s, <15% overhead on existing commands, full suite <30 min or NEEDS CLARIFICATION]  
-**Constraints**: [domain-specific, e.g., <200ms p95, <100MB memory, offline-capable or NEEDS CLARIFICATION]  
-**Scale/Scope**: [domain-specific, e.g., 10k users, 1M LOC, 50 screens or NEEDS CLARIFICATION]
+**Language/Version**: TypeScript 5+ / Next.js 15 App Router
+**Primary Dependencies**: Tailwind CSS v4, next/font/google (Inter + Playfair Display)
+**Storage**: N/A
+**Testing**: Jest + React Testing Library (35 tests)
+**Target Platform**: Vercel (web)
+**Performance Goals**: Lighthouse performance >= 85, accessibility >= 90
+**Constraints**: No new npm packages beyond google fonts; no JS animation libraries
+**Scale/Scope**: ~10 components, 7 routes
 
 ## Constitution Check
 
-*GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
-
-[Gates determined based on constitution file]
+- Named exports only (except Next.js route files) ✓
+- No inline styles — Tailwind utility classes only ✓
+- TypeScript strict ✓
+- Mobile-first responsive ✓
 
 ## Project Structure
 
-### Documentation (this feature)
-
 ```
-polaris-specs/[###-feature]/
-├── plan.md              # This file (/polaris.plan command output)
-├── research.md          # Phase 0 output (/polaris.plan command)
-├── data-model.md        # Phase 1 output (/polaris.plan command)
-├── quickstart.md        # Phase 1 output (/polaris.plan command)
-├── contracts/           # Phase 1 output (/polaris.plan command)
-└── tasks.md             # Phase 2 output (/polaris.tasks command - NOT created by /polaris.plan)
-```
+app/
+├── layout.tsx          # Add Playfair Display font, update body bg to cream
+├── globals.css         # CSS custom properties for brand colours
+├── page.tsx            # Update hero + section backgrounds
+├── portfolio/page.tsx  # Photo-forward grid update
+├── about/page.tsx      # Full-width image on mobile
+└── contact/page.tsx    # Green accent on form + button
 
-### Source Code (repository root)
-<!--
-  ACTION REQUIRED: Replace the placeholder tree below with the concrete layout
-  for this feature. Delete unused options and expand the chosen structure with
-  real paths (e.g., apps/admin, packages/something). The delivered plan must
-  not include Option labels.
--->
+components/
+├── Header.tsx          # Transparent → opaque scroll behaviour
+├── Hero.tsx            # Full-vh, large serif headline, green CTA
+├── Footer.tsx          # Deep charcoal/green background
+├── PortfolioGrid.tsx   # Larger tiles, minimal overlay
+├── Services.tsx        # Cream section background, green accent icons
+├── ProcessSteps.tsx    # Warm background, green step numbers
+└── ContactForm.tsx     # Green border inputs, green submit button
 
-```
-# [REMOVE IF UNUSED] Option 1: Single project (DEFAULT)
-src/
-├── models/
-├── services/
-├── cli/
-└── lib/
-
-tests/
-├── contract/
-├── integration/
-└── unit/
-
-# [REMOVE IF UNUSED] Option 2: Web application (when "frontend" + "backend" detected)
-backend/
-├── src/
-│   ├── models/
-│   ├── services/
-│   └── api/
-└── tests/
-
-frontend/
-├── src/
-│   ├── components/
-│   ├── pages/
-│   └── services/
-└── tests/
-
-# [REMOVE IF UNUSED] Option 3: Mobile + API (when "iOS/Android" detected)
-api/
-└── [same as backend above]
-
-ios/ or android/
-└── [platform-specific structure: feature modules, UI flows, platform tests]
+tailwind.config.ts      # Extend theme: brand colours + Playfair Display font family
 ```
 
-**Structure Decision**: [Document the selected structure and reference the real
-directories captured above]
+## Work Packages
 
-## Complexity Tracking
-
-*Fill ONLY if Constitution Check has violations that must be justified*
-
-| Violation | Why Needed | Simpler Alternative Rejected Because |
-|-----------|------------|-------------------------------------|
-| [e.g., 4th project] | [current need] | [why 3 projects insufficient] |
-| [e.g., Repository pattern] | [specific problem] | [why direct DB access insufficient] |
+| ID | Title | Scope |
+|----|-------|-------|
+| WP01 | Design tokens, fonts, global styles | tailwind.config.ts, globals.css, layout.tsx |
+| WP02 | Header, Hero, Footer redesign | Header.tsx, Hero.tsx, Footer.tsx |
+| WP03 | Portfolio grid and content pages | PortfolioGrid.tsx, about/page.tsx, contact/page.tsx, Services.tsx, ProcessSteps.tsx |
