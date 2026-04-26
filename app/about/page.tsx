@@ -10,10 +10,10 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <section className="max-w-5xl mx-auto px-4 py-12">
-      <h1 className="text-3xl font-semibold text-stone-800 mb-8">O nas</h1>
+      <h1 className="font-display text-3xl font-semibold text-stone-800 mb-8">O nas</h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
-        <div className="relative aspect-[4/3] overflow-hidden rounded-sm">
+        <div className="w-full relative aspect-[4/3] overflow-hidden rounded-sm">
           <Image
             src="/images/main_photo.jpg"
             alt="Zaya Design Studio — projektowanie ogrodów i wnętrz"

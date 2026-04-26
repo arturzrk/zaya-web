@@ -23,7 +23,7 @@ export default function HomePage() {
       <Hero />
 
       {/* Company intro */}
-      <section className="py-20 px-4">
+      <section className="bg-cream py-20 px-4">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="relative aspect-[4/3] w-full">
             <Image
@@ -35,7 +35,7 @@ export default function HomePage() {
             />
           </div>
           <div>
-            <h2 className="text-3xl font-bold text-stone-800 mb-6">
+            <h2 className="font-display text-3xl font-bold text-stone-800 mb-6">
               Witamy w <span className="text-green-700">Zaya</span>
             </h2>
             <p className="text-stone-600 leading-relaxed mb-4">

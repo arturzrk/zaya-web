@@ -88,7 +88,7 @@ export function ContactForm() {
           value={form.name}
           onChange={handleChange}
           aria-describedby={errors.name ? "name-error" : undefined}
-          className="w-full rounded border border-stone-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-stone-500"
+          className="w-full rounded border border-stone-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-forest focus:border-forest"
         />
         {errors.name && (
           <p id="name-error" role="alert" className="mt-1 text-xs text-red-600">
@@ -108,7 +108,7 @@ export function ContactForm() {
           value={form.email}
           onChange={handleChange}
           aria-describedby={errors.email ? "email-error" : undefined}
-          className="w-full rounded border border-stone-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-stone-500"
+          className="w-full rounded border border-stone-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-forest focus:border-forest"
         />
         {errors.email && (
           <p id="email-error" role="alert" className="mt-1 text-xs text-red-600">
@@ -128,7 +128,7 @@ export function ContactForm() {
           value={form.subject}
           onChange={handleChange}
           aria-describedby={errors.subject ? "subject-error" : undefined}
-          className="w-full rounded border border-stone-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-stone-500"
+          className="w-full rounded border border-stone-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-forest focus:border-forest"
         />
         {errors.subject && (
           <p id="subject-error" role="alert" className="mt-1 text-xs text-red-600">
@@ -148,7 +148,7 @@ export function ContactForm() {
           value={form.message}
           onChange={handleChange}
           aria-describedby={errors.message ? "message-error" : undefined}
-          className="w-full rounded border border-stone-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-stone-500 resize-none"
+          className="w-full rounded border border-stone-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-forest focus:border-forest resize-none"
         />
         {errors.message && (
           <p id="message-error" role="alert" className="mt-1 text-xs text-red-600">
@@ -166,7 +166,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="w-full rounded bg-stone-800 px-4 py-2 text-sm font-medium text-white hover:bg-stone-700 disabled:opacity-50 transition-colors"
+        className="w-full rounded bg-forest px-4 py-2 text-sm font-medium text-white hover:bg-forest-light disabled:opacity-50 transition-colors"
       >
         {status === "submitting" ? "Wysyłanie…" : "Wyślij wiadomość"}
       </button>

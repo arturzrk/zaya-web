@@ -22,8 +22,8 @@ export function PortfolioGrid({ projects }: PortfolioGridProps) {
             className="object-cover transition-transform duration-500 group-hover:scale-105"
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           />
-          <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300 flex items-end">
-            <p className="text-white text-sm font-semibold px-4 py-3 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+          <div className="absolute inset-0 bg-black/0 group-hover:bg-black/25 transition-colors duration-300 flex items-end">
+            <p className="font-display text-white text-sm font-semibold px-4 py-3 translate-y-full group-hover:translate-y-0 transition-transform duration-300 group-hover:border-b-2 group-hover:border-forest">
               {project.title}
             </p>
           </div>
