@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export function Hero() {
   return (
-    <section className="relative h-[85vh] min-h-[500px] w-full overflow-hidden">
+    <section className="relative min-h-screen min-h-[500px] w-full overflow-hidden">
       <Image
         src="/images/slider666.jpeg"
         alt="Zaya Design — garden and interior design"
@@ -12,12 +12,12 @@ export function Hero() {
         className="object-cover"
         sizes="100vw"
       />
-      <div className="absolute inset-0 bg-black/40" />
+      <div className="absolute inset-0 bg-black/50" />
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
         <p className="text-white/80 text-sm uppercase tracking-widest mb-3">
           Dom i Ogród to Twoja historia
         </p>
-        <h1 className="text-white text-4xl md:text-6xl font-bold leading-tight mb-4">
+        <h1 className="text-white font-display text-5xl md:text-7xl font-bold leading-tight mb-4">
           Spotkajmy się<br />u Ciebie w ogrodzie
         </h1>
         <p className="text-white/80 text-lg mb-8 max-w-xl">
@@ -26,13 +26,13 @@ export function Hero() {
         <div className="flex flex-col sm:flex-row gap-4">
           <Link
             href="/portfolio"
-            className="bg-white text-stone-800 px-8 py-3 uppercase text-sm tracking-wider font-semibold hover:bg-stone-100 transition-colors"
+            className="bg-forest hover:bg-forest-light text-white rounded px-8 py-3 font-semibold transition-colors"
           >
             Zobacz nasze projekty
           </Link>
           <Link
             href="/contact"
-            className="border border-white text-white px-8 py-3 uppercase text-sm tracking-wider font-semibold hover:bg-white/10 transition-colors"
+            className="border-2 border-white text-white hover:bg-white/10 rounded px-8 py-3 font-semibold transition-colors"
           >
             Zostaw wiadomość
           </Link>

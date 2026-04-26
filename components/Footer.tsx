@@ -8,7 +8,7 @@ const ADDRESS = "ul. Cynamonowa 2, Jelenia Góra";
 
 export function Footer() {
   return (
-    <footer className="bg-stone-800 text-stone-300 mt-auto">
+    <footer className="bg-charcoal text-stone-300 mt-auto">
       <div className="max-w-6xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Brand */}
         <div>
@@ -25,7 +25,7 @@ export function Footer() {
           </p>
           <ul className="space-y-1 text-sm">
             <li>
-              <a href={`tel:${PHONE.replace(/\s/g, "")}`} className="hover:text-white transition-colors">
+              <a href={`tel:${PHONE.replace(/\s/g, "")}`} className="hover:text-forest transition-colors">
                 {PHONE}
               </a>
             </li>
@@ -39,7 +39,7 @@ export function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Zaya Design on Facebook"
-              className="hover:text-white transition-colors"
+              className="hover:text-forest transition-colors"
             >
               Facebook
             </a>
@@ -48,7 +48,7 @@ export function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Zaya Design on Instagram"
-              className="hover:text-white transition-colors"
+              className="hover:text-forest transition-colors"
             >
               Instagram
             </a>
@@ -62,12 +62,12 @@ export function Footer() {
           </p>
           <ul className="space-y-1 text-sm">
             <li>
-              <Link href="/policy/cookies" className="hover:text-white transition-colors">
+              <Link href="/policy/cookies" className="hover:text-forest transition-colors">
                 Cookie Policy
               </Link>
             </li>
             <li>
-              <Link href="/policy/privacy" className="hover:text-white transition-colors">
+              <Link href="/policy/privacy" className="hover:text-forest transition-colors">
                 Privacy Policy
               </Link>
             </li>
@@ -75,7 +75,7 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-stone-700 text-center text-xs text-stone-500 py-4">
+      <div className="border-t border-white/10 text-center text-xs text-stone-500 py-4">
         &copy; {new Date().getFullYear()} Zaya Design Studio. All rights reserved.
       </div>
     </footer>
